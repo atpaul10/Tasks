@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data into Table</title>
+    <link rel="stylesheet" href="userForm.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Registration Form</h1>
+        <div class="form-validation">
+            <form id="formId">
+
+                <!-- First Name -->
+                <label for="firstName">First Name</label>
+                <input type="text" placeholder="Enter Your First Name" id="firstName">
+                <div class="error" id="firstNameError">First name is required!</div>
+
+                <!-- Last Name -->
+                <label for="lastName">Last Name</label>
+                <input type="text" placeholder="Enter Your Last Name" id="lastName">
+                <div class="error" id="lastNameError">Last name is required!</div>
+
+                <!-- Phone Number -->
+                <label for="number">Phone Number</label>
+                <input type="text" placeholder="Enter Your Phone Number" id="number">
+                <div class="error" id="phoneNumberError">Phone Number is required and should contain exactly 10 digits</div>
+
+                <!-- Gender -->
+                <label for="gender">Gender</label>
+                <select id="selectionId">
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <div class="error" id="genderError">Please select your gender!</div>
+
+                <!-- Address -->
+                <label for="address">Address</label>
+                <textarea id="address" placeholder="Enter Your Address"></textarea>
+                <div class="error" id="addressError">Address is required!</div>
+
+                <!-- Date -->
+                <label for="date">Date of Birth</label>
+                <input type="date" id="date">
+                <div class="error" id="dateError">Date of Birth is required!</div>
+
+                <!-- Title -->
+                <label for="title">Title</label>
+                <input type="text" placeholder="Enter Title" id="title">
+                <div class="error" id="titleError">Title is required!</div>
+
+                <!-- Experience -->
+                <label for="experience">Experience</label>
+                <textarea id="experience" placeholder="Enter Your Experience"></textarea>
+                <div class="error" id="experienceError">Experience is required!</div>
+
+                <button type="button" id="submitBtn">Submit Form</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="data">
+        <h2>Submitted Data</h2>
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Phone Number</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Date Of Birth</th>
+                    <th>Title</th>
+                    <th>Experience</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="formValidation.js"></script>
+</body>
+</html>
